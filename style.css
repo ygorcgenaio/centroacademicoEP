@@ -20,9 +20,6 @@
     }
 }
 
-
-
-
 /* Variáveis de cores para fácil manutenção */
 :root {
     --primary-color: #002d6b; /* Azul CAEPRO */
@@ -159,6 +156,9 @@ p {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     background-color: var(--accent-color);
     flex-shrink: 0;
+    
+    /* Regra adicionada para a proporção em telas maiores (Desktop) */
+    aspect-ratio: 4 / 5;
 }
 
 .carousel-track {
@@ -408,15 +408,22 @@ p {
 
     .management-content {
         flex-direction: column;
-        text-align: center;
+        align-items: center; /* Alinha os elementos no centro */
     }
 
     .management-text {
+        width: 100%; /* Ocupa toda a largura */
+        text-align: center;
         margin-top: 2rem;
     }
 
+    /* Estilos para o Carrossel da Gestão 2025 */
     .carousel-container {
-        width: 100%;
-        height: auto;
+        width: 90%; /* Ocupa 90% da largura do contêiner */
+        aspect-ratio: 4 / 5; /* Mantém a proporção 4:5 */
+    }
+
+    .carousel-image {
+        object-fit: contain; /* Garante que a imagem inteira seja visível */
     }
 }
