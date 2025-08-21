@@ -518,34 +518,3 @@ p {
 
 }
 
-
-/* Responsividade 
-@media (max-width: 768px) {
-    .header-content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .management-content {
-        display: flex;
-        align-items: center; 
-        gap: 40px;
-        flex-wrap: wrap; 
-        justify-content: center; /* Adiciona essa linha 
-    }
-
-    .management-text {
-        margin-top: 2rem;
-    }
-
-    /* As regras abaixo foram removidas para manter o tamanho fixo do desktop */
-    /*
-    .carousel-container {
-        width: 100%;
-        height: auto;
-    }
-
-    .carousel-image {
-        object-fit: contain;
-    }
-    */
