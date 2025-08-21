@@ -215,9 +215,22 @@ p {
 /* --- Novo Layout para a seção Links Úteis --- */
 .links-grid-new {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    grid-auto-rows: minmax(150px, auto); /* Altura mínima para os cards */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
+    /* Remova esta linha */
+    /* grid-auto-flow: dense; */
+}
+
+
+.links-grid-new {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.link-card-new.large {
+    grid-row: span 2;
+    grid-column: span 1;
 }
 
 .link-card-new {
@@ -266,6 +279,61 @@ p {
     justify-content: center;
     padding: 2rem;
 }
+
+.link-card-new.large .link-icon {
+    font-size: 3.5rem;
+}
+
+.link-card-new.large h3 {
+    font-size: 1.5rem;
+}
+
+
+#horarios-link-container {
+    /* ... (seu código atual) ... */
+    grid-column: 4;
+    grid-row: 2;
+}
+
+
+.link-card-new {
+    background-color: var(--light-blue);
+    border-radius: 10px;
+    padding: 1.5rem;
+    text-align: center;
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.link-card-new:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.link-card-new .link-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.link-card-new h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+.link-card-new p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: var(--text-color);
+    margin-bottom: 0;
+}
+
+
 
 .link-card-new.large .link-icon {
     font-size: 3.5rem;
@@ -399,7 +467,59 @@ p {
     color: #fff;
 }
 
-/* Responsividade */
+/* Responsividade para o novo layout */
+@media (max-width: 768px) {
+    .links-grid-new {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        grid-auto-rows: minmax(150px, auto);
+    }
+    .link-card-new.large {
+        grid-row: span 1;
+        grid-column: span 1;
+    }
+    /* Remove as regras de posicionamento fixo para telas menores */
+    .links-grid-new a {
+        grid-column: auto;
+        grid-row: auto;
+    }
+    #horarios-link-container {
+        grid-column: auto;
+        grid-row: auto;
+    }
+
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .management-content {
+        display: flex;
+        align-items: center; 
+        gap: 40px;
+        flex-wrap: wrap; 
+        justify-content: center; /* Adiciona essa linha*/
+    }
+
+    .management-text {
+        margin-top: 2rem;
+    }
+
+    /* As regras abaixo foram removidas para manter o tamanho fixo do desktop */
+    
+    .carousel-container {
+        width: 100%;
+        height: auto;
+    }
+
+    .carousel-image {
+        object-fit: contain;
+    }
+
+
+}
+
+
+/* Responsividade 
 @media (max-width: 768px) {
     .header-content {
         flex-direction: column;
@@ -411,10 +531,21 @@ p {
         align-items: center; 
         gap: 40px;
         flex-wrap: wrap; 
-        justify-content: center; /* Adiciona essa linha */
+        justify-content: center; /* Adiciona essa linha 
     }
 
     .management-text {
         margin-top: 2rem;
     }
-}
+
+    /* As regras abaixo foram removidas para manter o tamanho fixo do desktop */
+    /*
+    .carousel-container {
+        width: 100%;
+        height: auto;
+    }
+
+    .carousel-image {
+        object-fit: contain;
+    }
+    */
