@@ -407,23 +407,14 @@ p {
     }
 
     .management-content {
-        flex-direction: column;
-        align-items: center; /* Alinha os elementos no centro */
+        display: flex;
+        align-items: center; 
+        gap: 40px;
+        flex-wrap: wrap; 
+        justify-content: center; /* Adiciona essa linha */
     }
 
     .management-text {
-        width: 100%; /* Ocupa toda a largura */
-        text-align: center;
         margin-top: 2rem;
-    }
-
-    /* Estilos para o Carrossel da Gestão 2025 */
-    .carousel-container {
-        width: 90%; /* Ocupa 90% da largura do contêiner */
-        aspect-ratio: 4 / 5; /* Mantém a proporção 4:5 */
-    }
-
-    .carousel-image {
-        object-fit: contain; /* Garante que a imagem inteira seja visível */
     }
 }
