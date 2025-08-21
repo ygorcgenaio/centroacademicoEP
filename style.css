@@ -504,17 +504,9 @@ p {
         margin-top: 2rem;
     }
 
-    /* As regras abaixo foram removidas para manter o tamanho fixo do desktop */
     
-    .carousel-container {
-        width: 100%;
-        height: auto;
-    }
-
-    .carousel-image {
-        object-fit: contain;
-    }
 
 
 }
+
 
