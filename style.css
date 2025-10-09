@@ -221,18 +221,24 @@ p {
     /* grid-auto-flow: dense; */
 }
 
+/* Estilo para o novo card da Semana Acadêmica */
+.link-card-new.academic-week {
+    /* Herda o estilo básico do .link-card-new */
+    background-color: var(--light-blue);
+}
+
 
 .links-grid-new {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
 }
-
+/*
 .link-card-new.large {
     grid-row: span 2;
     grid-column: span 1;
 }
-
+*/
 .link-card-new {
     background-color: var(--light-blue);
     border-radius: 10px;
@@ -272,7 +278,7 @@ p {
 
 /* Estilo para o card GRANDE */
 .link-card-new.large {
-    grid-row: span 2;
+    grid-row: span 1;
     grid-column: span 1;
     display: flex;
     flex-direction: column;
