@@ -1,0 +1,121 @@
+/* Container Principal (Fundo Azul) */
+.schedule-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: var(--blue-color, #002d6b); /* Usando uma cor de fundo similar */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Atualize a regra que estiliza a linha sob o título (seja um ::after ou border-bottom) */
+.about-section h2 {
+    /* Mantenha a fonte */
+    margin-bottom: 20px; /* Mais espaço após o título */
+}
+
+.about-section h2::after { /* Se estiver usando um pseudo-elemento para a linha */
+    content: '';
+    display: block;
+    width: 60px; /* Mantenha o tamanho */
+    height: 3px; /* Mantenha a espessura */
+    background-color: rgba(255, 165, 0, 0.9); /* Laranja com leve opacidade */
+    margin-top: 10px; /* Espaço entre o título e a linha */
+    /* Opcional: Efeito de sombra sutil */
+    box-shadow: 0 0 5px rgba(255, 140, 0, 0.5); 
+}
+
+
+
+.schedule-title {
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+
+/* Abas de Navegação (14/10, 15/10, ...) */
+.day-tabs {
+    display: flex;
+    justify-content: space-around;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px 5px 0 0;
+    border-bottom: 3px solid transparent;
+}
+
+.day-tabs .tab {
+    padding: 10px 0;
+    flex-grow: 1;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s;
+}
+
+.day-tabs .tab.active,
+.day-tabs .tab:hover {
+    
+    border-bottom: 3px solid white;
+}
+
+.day-tabs .tab.active {
+    background-color: #ADD8E6; /* Substitua por um azul claro da sua paleta, se for diferente */
+    color: #333; /* Texto escuro na aba ativa, como na sua imagem */
+    border-radius: 5px 5px 0 0;
+}
+
+/* Área de Conteúdo dos Eventos (Fundo Branco) */
+.day-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+}
+
+/* Estilo do Card de Evento (Separador) */
+.event-card {
+    display: flex;
+    justify-content: space-between; /* Alinha o texto e o botão em lados opostos */
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee; /* Linha divisória */
+}
+
+.event-card:last-child {
+    border-bottom: none; /* Remove a linha do último item */
+}
+
+.event-title {
+    font-size: 1.1em;
+    margin: 0 0 5px 0;
+    color: #333;
+}
+
+.event-info {
+    font-size: 0.9em;
+    margin: 3px 0;
+    color: #666;
+}
+
+/* Botão de Inscrição (Ícone) */
+.inscription-link {
+    font-size: 1.5em;
+    color: var(--secondary-color, #ff6600); /* Use a cor laranja do seu site */
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.2s;
+}
+
+.inscription-link:hover {
+    color: var(--primary-color, #007BFF); /* Mude a cor no hover para dar feedback */
+}
+
+/* Esconder conteúdo dos outros dias (Será ativado pelo JS) */
+.day-content {
+    display: none;
+}
+
+.day-content.active {
+    display: block;
+}
